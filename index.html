@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="libs/jquery.multiselect.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="libs/jquery.multiselect.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="libs/d3jstopojson.v1.js"></script>
+
+  <title>US School Shootings Visualized</title>
+</head>
+<body>
+  <div class="header">
+    <h1>Unmasking the Epidemic: Analyzing the Complex
+      Factors Behind Gun Violence in the United States</h1>
+  </div>
+  <button id="scrollButton">Scroll</button>
+  <div class="container">
+    <svg id="lineChartSvg"></svg> 
+    <div class="map-container">
+      <div id="tooltip" class="tooltip"></div>
+      
+      <div id="map"></div>
+      <div class="form-bar">
+        <label for="yearSlider">Select Year:</label>
+        <div id="yearSlider"></div>
+        <span id="yearSliderMin"></span> - <span id="yearSliderMax"></span>
+        <br>
+        <label for="schoolTypeDropdown">Select School Type:</label>
+        <select id="schoolTypeDropdown"  multiple="multiple"></select>
+      </div>
+    </div>
+    <!-- <div id="filters">
+      <label for="startYear">Start Year:</label>
+      <select id="startYear"></select>
+      <label for="endYear">End Year:</label>
+      <select id="endYear"></select>
+    </div> -->
+    
+    <div id="chart-container">
+      <svg id="schoolLevelChartSvg"></svg>      
+      <div id="click-chart">
+        <svg id="barChartSvg"></svg>
+        <h3>Click on a state in the above graph to see more information</h3>
+        <svg id="citiesChartSvg"></svg>
+      </div>
+      <svg id="monthsChartSvg"></svg>      
+    </div>
+  </div>
+  <script src="map.js"></script>
+  <script src="Charts_Script.js"></script>
+
+</body>
+</html>

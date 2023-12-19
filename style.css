@@ -1,0 +1,287 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+}
+.header h1 {
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 1080px; */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.map-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20px; /* Add margin to the right to add space between the map-container and the graph SVG */
+    
+}
+.map, .graph {
+    border: 1px solid #ddd;
+    margin: 20px;
+    overflow: visible;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+.form-controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.form-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 81.6em;
+    height: 5em;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /* margin: 2px 0; */
+}
+/* #map-container {
+    position: absolute;
+    display: block;
+    background-color: #A9A9A9;
+    width: 60%;
+} */
+#scrollButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 15px 15px; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px; /* Rounded corners */
+}
+svg {
+    display: block;
+    border: 1px;
+    border-color: black;
+}
+.map {
+    width: 70vw;
+    height: 90vh;
+    border: 1px black;
+}
+.centered-header {
+    text-align: center;
+    /* Add more styles as needed */
+}
+
+.centered-header h1 {
+    /* Add styles for the h1 tag */
+    font-size: 2em; /* for example */
+    color: #453535;
+}
+
+
+.tooltip {
+    position: absolute;
+    opacity: 0;
+    width: auto;
+    padding: 10px;
+    background: white;
+    font-family: sans-serif;
+    font-size: medium;
+    border-radius: 2px;
+    line-height: 1;
+    pointer-events: none; /* This allows the mouse events to pass through the tooltip */
+    z-index: 999; /* Ensure the tooltip appears above other elements */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
+}
+path {
+    stroke-width: .5px;
+    stroke: black
+}
+
+path:hover {
+    opacity: .6;
+    stroke: black;
+    stroke-width: 4px;
+}
+#sidePanel {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 40%;
+    background-color: #f0f0f0;
+    box-shadow: -5px 0 5px -5px #333;
+    overflow-y: auto;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+}
+
+#sidePanel label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#sidePanel select {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    max-height: 100px;
+    overflow-y: auto; /* Add scroll if items exceed the limit */
+    /* Your existing styles for select elements */
+}
+.dot {
+    fill: steelblue;
+}
+
+.dot.highlighted {
+    fill: red;
+}
+
+.line-segment {
+    stroke: steelblue;
+}
+
+.line-segment.highlighted {
+    stroke: red;
+}
+
+.highlighted {
+    fill: red;
+    stroke: black;
+    stroke-width: 2;
+}
+
+.highlighted {
+    fill: steelblue;
+    opacity: 0.3;
+}
+.bar-1 {
+    fill: rgb(70, 180, 98)
+}
+.bar-2 {
+    fill: red;
+}
+
+.bar-3 {
+    fill: orange;
+}
+.centered-header h2 {
+    margin-top: 10px; /* Adjust this value as needed */
+    text-align: center;
+}
+
+#chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width:100%;
+}
+#chart-container > * {
+    transform: scale(0.9);
+}
+
+#click-chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* border: #000 1px solid; */
+}
+
+#lineChart-container,
+
+#schoolLevelChart-container,
+#monthsChart-container,
+
+#stackedBarChart-container
+ {
+    width: 100%; /* Each chart takes up 100% width */
+    box-sizing: border-box;
+    padding: 10px; /* Add padding for spacing */
+    background-color: #f0f0f0;
+    
+}
+#barChart-container,
+#citiesChart-container{
+    width: 50%; /* Each chart takes up 100% width */
+    box-sizing: border-box;
+    padding: 10px; /* Add padding for spacing */
+    background-color: #f0f0f0;
+
+}
+#schoolLevelChart-container,
+#stackedBarChart-container
+ {
+    width: 100%; /* Each chart takes up 100% width */
+    box-sizing: border-box;
+    padding: 10px; /* Add padding for spacing */
+    background-color: #f0f0f0;
+}
+
+
+#lineChart-container {
+    order: 1; /* Display line chart first */
+}
+
+#barChart-container,
+#citiesChart-container {
+    order: 2; /* Display bar charts next */
+}
+#schoolLevelChart-container,
+#stackedBarChart-container{
+    order: 3;
+}
+#monthsChart-container{
+    order: 4;
+}
+
+
+#lineChart-container svg,
+#barChart-container svg,
+#schoolLevelChart-container svg,
+#monthsChart-container svg ,
+#citiesChart-container svg,
+#stackedBarChart-container{
+    width: 100%;
+}
+
+#tooltip2 {
+    position: absolute;
+    opacity:0;
+    top: 0;
+    left: 0;
+    width: auto;
+    padding: 10px;
+    background: white;
+    font-family: sans-serif;
+    font-size: medium;
+    border-radius: 2px;
+    line-height: 1;
+}
+#yearSlider {
+    width: 50%; /* Adjust as needed */
+}

@@ -1,0 +1,3 @@
+Github: https://github.com/FrenzyParrot/K12SSD-Analysis
+
+Hosted Page: https://frenzyparrot.github.io/K12SSD-Analysis/
